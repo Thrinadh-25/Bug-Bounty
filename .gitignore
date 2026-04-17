@@ -1,0 +1,121 @@
+# ---------- Python ----------
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+dist/
+*.egg-info/
+.eggs/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Virtual environments
+venv/
+.venv/
+env/
+.env/
+ENV/
+
+# ---------- Secrets & credentials ----------
+.env
+.env.*
+!.env.example
+*.key
+*.pem
+*.crt
+*.p12
+*.pfx
+api_keys*
+*apikey*
+*api_key*
+credentials*
+secrets*
+tokens*
+*.token
+config.local.*
+
+# Session / auth artifacts captured during hunting
+cookies.txt
+*cookies*.txt
+*cookies*.json
+sessions/
+*.session
+
+# ---------- Bug-bounty scan output (target data) ----------
+# Per-target recon, findings, trigger state, reports
+automation/output/
+automation/**/output/
+output/
+
+# Interactsh + tool runtime artifacts
+*.interactsh
+interactsh-*.log
+nuclei-*.log
+
+# ---------- Per-target hunting workspaces ----------
+# Keep templates, ignore real target data
+targets/active/**
+targets/completed/**
+targets/queue/**
+!targets/**/.gitkeep
+!targets/_template/**
+
+# ---------- Reports (pre-disclosure; don't leak POCs) ----------
+reports/drafts/**
+reports/submitted/**
+reports/accepted/**
+reports/rejected/**
+!reports/**/.gitkeep
+!reports/templates/**
+
+# Personal hunting notes and tracking (payouts, scope, tips)
+notes/**
+!notes/.gitkeep
+tracking/**
+!tracking/.gitkeep
+!tracking/_template/**
+
+# Recon scratch space
+recon/**
+!recon/.gitkeep
+!recon/_template/**
+
+# ---------- Wordlists & large resources ----------
+# Usually pulled from SecLists — don't bloat the repo
+automation/wordlists/*.txt
+automation/wordlists/*.lst
+resources/wordlists/**
+*.rockyou*
+
+# ---------- Claude Code ----------
+.claude/settings.local.json
+.claude/.cache/
+.claude/projects/
+
+# ---------- IDE / editor ----------
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+.project
+.classpath
+
+# ---------- OS ----------
+.DS_Store
+Thumbs.db
+desktop.ini
+ehthumbs.db
+$RECYCLE.BIN/
+
+# ---------- Logs & temp ----------
+*.log
+*.tmp
+*.bak
+*.orig
+tmp/
+temp/
+scratch/

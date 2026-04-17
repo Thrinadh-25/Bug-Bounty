@@ -1,0 +1,22 @@
+# Scope file template — copy this per target and fill in
+# Lines starting with # are comments
+
+[in-scope]
+# Add in-scope domains here (supports wildcard: *.example.com)
+# *.example.com
+# api.example.com
+# example.com
+
+[out-of-scope]
+# Add out-of-scope domains/paths here
+# admin.example.com
+# *.internal.example.com
+# staging.example.com
+
+[rules]
+# Add program rules here for reference
+# no-dos
+# no-social-engineering
+# no-physical-attacks
+# no-automated-scanning-on-production
+# rate-limit-10-requests-per-second
